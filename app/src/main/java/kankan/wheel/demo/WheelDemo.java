@@ -29,9 +29,7 @@ public class WheelDemo extends ListActivity {
             path = "";
         }
 
-        setListAdapter(new SimpleAdapter(this, getData(path),
-                android.R.layout.simple_list_item_1, new String[] { "title" },
-                new int[] { android.R.id.text1 }));
+        setListAdapter(new SimpleAdapter(this, getData(path),android.R.layout.simple_list_item_1, new String[] { "title" }, new int[] { android.R.id.text1 }));
     }
 
     protected List getData(String prefix) {
@@ -61,9 +59,7 @@ public class WheelDemo extends ListActivity {
         for (int i = 0; i < len; i++) {
             ResolveInfo info = list.get(i);
             CharSequence labelSeq = info.loadLabel(pm);
-            String label = labelSeq != null
-                    ? labelSeq.toString()
-                    : info.activityInfo.name;
+            String label = labelSeq != null ? labelSeq.toString() : info.activityInfo.name;
             
             if (prefix.length() == 0 || label.startsWith(prefix)) {
                 
